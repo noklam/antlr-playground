@@ -1,1 +1,1 @@
-antlr4 -Dlanguage=Python3 java.g4
+antlr4 -Dlanguage=Python3 Java.g4
