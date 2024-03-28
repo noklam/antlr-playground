@@ -375,7 +375,7 @@ closed_pattern
     ;
 
 literal_pattern
-    : signed_number { self.CannotBePlusMinus() }?
+    : signed_number { this.CannotBePlusMinus() }?
     | complex_number
     | strings
     | 'None'
@@ -384,7 +384,7 @@ literal_pattern
     ;
 
 literal_expr
-    : signed_number { self.CannotBePlusMinus() }?
+    : signed_number { this.CannotBePlusMinus() }?
     | complex_number
     | strings
     | 'None'
@@ -420,7 +420,7 @@ capture_pattern
     ;
 
 pattern_capture_target
-    : /* cannot be '_' */ name { self.CannotBeDotLpEq() }?
+    : /* cannot be '_' */ name { this.CannotBeDotLpEq() }?
     ;
 
 wildcard_pattern
@@ -428,7 +428,7 @@ wildcard_pattern
     ;
 
 value_pattern
-    : attr { self.CannotBeDotLpEq() }?
+    : attr { this.CannotBeDotLpEq() }?
     ;
 
 attr

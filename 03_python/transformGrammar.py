@@ -1,8 +1,8 @@
 import sys, os, re, shutil
 
 def main(argv):
-    fix("PythonLexer.g4")
-    fix("PythonParser.g4")
+    fix("Python3Lexer.g4")
+    fix("Python3Parser.g4")
 
 def fix(file_path):
     print("Altering " + file_path)

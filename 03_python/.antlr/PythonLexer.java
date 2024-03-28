@@ -1,4 +1,4 @@
-// Generated from /Users/Nok_Lam_Chan/dev/antlr_playground/03_python/Python3Lexer.g4 by ANTLR 4.13.1
+// Generated from /Users/Nok_Lam_Chan/dev/antlr_playground/03_python/PythonLexer.g4 by ANTLR 4.13.1
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -9,7 +9,7 @@ import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.misc.*;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue", "this-escape"})
-public class Python3Lexer extends Python3LexerBase {
+public class PythonLexer extends Python3LexerBase {
 	static { RuntimeMetaData.checkVersion("4.13.1", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -139,13 +139,13 @@ public class Python3Lexer extends Python3LexerBase {
 	}
 
 
-	public Python3Lexer(CharStream input) {
+	public PythonLexer(CharStream input) {
 		super(input);
 		_interp = new LexerATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
 	@Override
-	public String getGrammarFileName() { return "Python3Lexer.g4"; }
+	public String getGrammarFileName() { return "PythonLexer.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
