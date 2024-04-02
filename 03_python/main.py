@@ -1,12 +1,25 @@
-from antlr4 import *
+from antlr4 import ParseTreeWalker, InputStream, CommonTokenStream
 from Python3Lexer import Python3Lexer
 from Python3Parser import Python3Parser
-
+from Python3ParserListener import Python3ParserListener
+from antlr4 import ParseTreeWalker
 code = open('examples/multi-line-imports.py', 'r').read()
 codeStream = InputStream(code)
 lexer = Python3Lexer(codeStream)
 
-tokens = lexer.getAllTokens()
 
-for t in tokens:
-    print(t.text, t.type)
+# parser = Python3Parser(lexer)
+token_stream = CommonTokenStream(lexer)
+parser = Python3Parser(token_stream)
+listener = Python3ParserListener()
+tree = parser.file_input()
+
+
+
+tokens = lexer.getAllTokens()
+# ParseTreeWalker().walk(listener, tree)
+
+# for t in tokens:
+#     # print(dir(t))
+#     # raise
+#     print(t)
